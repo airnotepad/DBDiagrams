@@ -1,6 +1,83 @@
 {
 	"commit": "892978f",
 	"createdAt": "2025-01-02T21:04:10.062Z",
-	"tables": [],
+	"databaseType": "sql_server",
+	"databaseEdition": "sql_server_2016_and_below",
+	"tables": [
+		{
+			"id": "ghc0pf2wbum0i60xf0y18bf6d",
+			"name": "__MigrationHistory",
+			"comments": "",
+			"fields": [
+				{
+					"id": "1p3zhtdqepuzm3wlsag8mwml8",
+					"name": "MigrationId",
+					"type": {
+						"id": "nvarchar",
+						"name": "nvarchar"
+					},
+					"primaryKey": true,
+					"unique": false,
+					"nullable": "false",
+					"character_maximum_length": "150",
+					"collation": "Cyrillic_General_CI_AS",
+					"createdAt": 1733302752520
+				},
+				{
+					"id": "o8e6hdybdo4i8edjf8xopn4nu",
+					"name": "ContextKey",
+					"type": {
+						"id": "nvarchar",
+						"name": "nvarchar"
+					},
+					"primaryKey": true,
+					"unique": false,
+					"nullable": "false",
+					"character_maximum_length": "300",
+					"collation": "Cyrillic_General_CI_AS",
+					"createdAt": 1733302752520
+				},
+				{
+					"id": "khr87w6sx9rxrdiym63di2fx2",
+					"name": "Model",
+					"type": {
+						"id": "varbinary",
+						"name": "varbinary"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "false",
+					"character_maximum_length": "-1",
+					"createdAt": 1733302752520
+				},
+				{
+					"id": "9p9cq3tv2co2y9r3c9wvose71",
+					"name": "ProductVersion",
+					"type": {
+						"id": "nvarchar",
+						"name": "nvarchar"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "false",
+					"character_maximum_length": "32",
+					"collation": "Cyrillic_General_CI_AS",
+					"createdAt": 1733302752520
+				}
+			],
+			"indexes": [
+				{
+					"id": "u8wjw1i990p19rmdx2zxcsp76",
+					"name": "PK_dbo.__MigrationHistory",
+					"unique": true,
+					"fieldIds": [
+						"1p3zhtdqepuzm3wlsag8mwml8",
+						"o8e6hdybdo4i8edjf8xopn4nu"
+					],
+					"createdAt": 1733302752520
+				}
+			]
+		}
+	],
 	"relationships": []
 }
