@@ -21,7 +21,8 @@
 					"nullable": "false",
 					"character_maximum_length": "150",
 					"collation": "Cyrillic_General_CI_AS",
-					"createdAt": 1733302752520
+					"createdAt": 1733302752520,
+					"comments": "Идентификатор миграции"
 				},
 				{
 					"id": "o8e6hdybdo4i8edjf8xopn4nu",
@@ -35,7 +36,8 @@
 					"nullable": "false",
 					"character_maximum_length": "300",
 					"collation": "Cyrillic_General_CI_AS",
-					"createdAt": 1733302752520
+					"createdAt": 1733302752520,
+					"comments": "Контекст"
 				},
 				{
 					"id": "khr87w6sx9rxrdiym63di2fx2",
@@ -62,7 +64,8 @@
 					"nullable": "false",
 					"character_maximum_length": "32",
 					"collation": "Cyrillic_General_CI_AS",
-					"createdAt": 1733302752520
+					"createdAt": 1733302752520,
+					"comments": "Версия"
 				}
 			],
 			"indexes": [
