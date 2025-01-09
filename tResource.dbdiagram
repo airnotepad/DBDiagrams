@@ -1,0 +1,405 @@
+{
+	"commit": "892978f",
+	"createdAt": "2025-01-02T21:04:10.062Z",
+	"databaseType": "sql_server",
+	"databaseEdition": "sql_server_2016_and_below",
+	"tables": [
+		{
+			"id": "3calovr7grxctshi0lvtk5r6w",
+			"name": "tResource",
+			"schema": "dbo",
+			"comments": "Справочник ресурсов",
+			"fields": [
+				{
+					"id": "gchtat56l9ew9yupqpw9cybkp",
+					"name": "resource_id",
+					"type": {
+						"id": "int",
+						"name": "int"
+					},
+					"primaryKey": true,
+					"unique": true,
+					"nullable": "false",
+					"createdAt": 1733302752603,
+					"comments": "ID ресурса"
+				},
+				{
+					"id": "3ewece1sjbjerlvukw0lyhngl",
+					"name": "extItem_id",
+					"type": {
+						"id": "int",
+						"name": "int"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "true",
+					"createdAt": 1733302752603,
+					"comments": "ID статьи расхода"
+				},
+				{
+					"id": "fmjt17719rykl9blavrbllt0j",
+					"name": "sost",
+					"type": {
+						"id": "int",
+						"name": "int"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "true",
+					"createdAt": 1733302752603,
+					"comments": "Состояние ресурса"
+				},
+				{
+					"id": "96f0uck245v0xoia3hg5mr9lg",
+					"name": "Name",
+					"type": {
+						"id": "varchar",
+						"name": "varchar"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "true",
+					"character_maximum_length": "500",
+					"collation": "Cyrillic_General_CI_AS",
+					"createdAt": 1733302752603,
+					"comments": "Наименование ресурса"
+				},
+				{
+					"id": "tjqmzd62w4oriw5z4bep8pmpi",
+					"name": "price",
+					"type": {
+						"id": "numeric",
+						"name": "numeric"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "true",
+					"precision": 18,
+					"scale": 2,
+					"createdAt": 1733302752603
+				},
+				{
+					"id": "w7v871cnj4sqhm5k87zcnzety",
+					"name": "Comment",
+					"type": {
+						"id": "varchar",
+						"name": "varchar"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "true",
+					"character_maximum_length": "500",
+					"collation": "Cyrillic_General_CI_AS",
+					"createdAt": 1733302752603,
+					"comments": "Описание ресурса"
+				},
+				{
+					"id": "t4dcd4ga90ovu6cz93llaf23z",
+					"name": "tax",
+					"type": {
+						"id": "int",
+						"name": "int"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "true",
+					"createdAt": 1733302752603
+				},
+				{
+					"id": "x9cvdr08k3izyqbsavu3qsazm",
+					"name": "Dimension_id",
+					"type": {
+						"id": "int",
+						"name": "int"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "false",
+					"default": "((0))",
+					"createdAt": 1733302752603,
+					"comments": "ID единицы измерения"
+				},
+				{
+					"id": "bg4oa8k6mzwktp3qopp97pcpf",
+					"name": "ResourceTypeId",
+					"type": {
+						"id": "int",
+						"name": "int"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "false",
+					"default": "((1))",
+					"createdAt": 1733302752603
+				},
+				{
+					"id": "scs8qkkj7r7uxhq4sxw15geyy",
+					"name": "MinimumRemainder",
+					"type": {
+						"id": "decimal",
+						"name": "decimal"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "true",
+					"precision": 18,
+					"scale": 3,
+					"createdAt": 1733302752603
+				},
+				{
+					"id": "awfqwc10bl26g1i1u5m3tm9x9",
+					"name": "OptimalRemainder",
+					"type": {
+						"id": "decimal",
+						"name": "decimal"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "true",
+					"precision": 18,
+					"scale": 3,
+					"createdAt": 1733302752603
+				},
+				{
+					"id": "q4xjak4k7ns07ovt3guhcs8ga",
+					"name": "NameEng",
+					"type": {
+						"id": "nvarchar",
+						"name": "nvarchar"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "false",
+					"character_maximum_length": "500",
+					"default": "('')",
+					"collation": "Cyrillic_General_CI_AS",
+					"createdAt": 1733302752603,
+					"comments": "Наименование ресурса на английском"
+				},
+				{
+					"id": "npmsfz1xxtbsbq43w4ihhx56g",
+					"name": "NomenclatureCode1C",
+					"type": {
+						"id": "nvarchar",
+						"name": "nvarchar"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "true",
+					"character_maximum_length": "-1",
+					"collation": "Cyrillic_General_CI_AS",
+					"createdAt": 1733302752603
+				},
+				{
+					"id": "v2oe3qenc0p21cgf073qlohyn",
+					"name": "Guid",
+					"type": {
+						"id": "uniqueidentifier",
+						"name": "uniqueidentifier"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "false",
+					"default": "('00000000-0000-0000-0000-000000000000')",
+					"createdAt": 1733302752603,
+					"comments": "Уникальный идентификатор"
+				},
+				{
+					"id": "79l6kxd5dcfg4f869c46v8920",
+					"name": "FerrionGuid",
+					"type": {
+						"id": "uniqueidentifier",
+						"name": "uniqueidentifier"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "false",
+					"default": "('00000000-0000-0000-0000-000000000000')",
+					"createdAt": 1733302752603
+				},
+				{
+					"id": "qgyx99tu46eaz5myytru0zbo6",
+					"name": "AuxiliaryToolType",
+					"type": {
+						"id": "int",
+						"name": "int"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "false",
+					"default": "((0))",
+					"createdAt": 1733302752603
+				},
+				{
+					"id": "ehevhx0xw8gk0j1d2sn3aww4n",
+					"name": "CopyNum",
+					"type": {
+						"id": "int",
+						"name": "int"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "false",
+					"default": "((0))",
+					"createdAt": 1733302752603
+				},
+				{
+					"id": "mesy3y5spqaw9khkcnj5krvp4",
+					"name": "OriginalResourceId",
+					"type": {
+						"id": "int",
+						"name": "int"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "false",
+					"default": "((0))",
+					"createdAt": 1733302752603
+				}
+			],
+			"indexes": [
+				{
+					"id": "xwrwjurhteu7got3emb7ofx0i",
+					"name": "PK__tResourc__4985FC73EAA0CD70",
+					"unique": true,
+					"fieldIds": [
+						"gchtat56l9ew9yupqpw9cybkp"
+					],
+					"createdAt": 1733302752603
+				}
+			],
+			"createdAt": 1733302752603
+		},
+		{
+			"id": "admwmy8m9usjul9qe4303yst5",
+			"name": "tDimension",
+			"fields": [
+				{
+					"id": "ykwt8husjkaghro7f54aevyub",
+					"name": "Id",
+					"type": {
+						"id": "int",
+						"name": "int"
+					},
+					"primaryKey": true,
+					"unique": true,
+					"nullable": "false",
+					"createdAt": 1733302752553,
+					"comments": "Идентификатор единицы измерения"
+				},
+				{
+					"id": "bzvyz0da5x1qz3plyp9tzydwa",
+					"name": "Dimension",
+					"type": {
+						"id": "nvarchar",
+						"name": "nvarchar"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "false",
+					"character_maximum_length": "-1",
+					"collation": "Cyrillic_General_CI_AS",
+					"createdAt": 1733302752553,
+					"comments": "Наименование единицы измерения"
+				},
+				{
+					"id": "m00x50xgj0kv5tvvh67874eit",
+					"name": "Sost",
+					"type": {
+						"id": "int",
+						"name": "int"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "false",
+					"createdAt": 1733302752553,
+					"comments": "Состояние единицы измерения"
+				},
+				{
+					"id": "p6ko1dwa4rtmvdlzzkezkf3v7",
+					"name": "Type",
+					"type": {
+						"id": "int",
+						"name": "int"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "false",
+					"default": "((0))",
+					"createdAt": 1733302752553
+				},
+				{
+					"id": "6ommkt8pw4ipumvdc8pe8ed56",
+					"name": "OkeiCode",
+					"type": {
+						"id": "nvarchar",
+						"name": "nvarchar"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "false",
+					"character_maximum_length": "-1",
+					"default": "('')",
+					"collation": "Cyrillic_General_CI_AS",
+					"createdAt": 1733302752553
+				},
+				{
+					"id": "5n1acw05xasfuy81ta9grbv9x",
+					"name": "PceCode",
+					"type": {
+						"id": "nvarchar",
+						"name": "nvarchar"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "false",
+					"character_maximum_length": "-1",
+					"default": "('')",
+					"collation": "Cyrillic_General_CI_AS",
+					"createdAt": 1733302752553
+				},
+				{
+					"id": "w4cfsxw3avjp4zhar07y137dn",
+					"name": "Coeff1C",
+					"type": {
+						"id": "decimal",
+						"name": "decimal"
+					},
+					"primaryKey": false,
+					"unique": false,
+					"nullable": "false",
+					"precision": 18,
+					"scale": 2,
+					"default": "((1))",
+					"createdAt": 1733302752553
+				}
+			],
+			"indexes": [
+				{
+					"id": "5z02d2oue5j7jpcg2x5vc2wpr",
+					"name": "PK_tDimension",
+					"unique": true,
+					"fieldIds": [
+						"ykwt8husjkaghro7f54aevyub"
+					],
+					"createdAt": 1733302752553
+				}
+			],
+			"createdAt": 1733302752553
+		}
+	],
+	"relationships": [
+		{
+			"id": "0sg9cc6adnuw7wn83v3fc0gu9",
+			"name": "Bone-44",
+			"comments": "orderItemCommand.cs:53",
+			"sourceTableId": "3calovr7grxctshi0lvtk5r6w",
+			"targetTableId": "admwmy8m9usjul9qe4303yst5",
+			"sourceFieldId": "x9cvdr08k3izyqbsavu3qsazm",
+			"targetFieldId": "ykwt8husjkaghro7f54aevyub",
+			"sourceCardinality": "one",
+			"targetCardinality": "one",
+			"createdAt": 1731526962
+		}
+	]
+}
